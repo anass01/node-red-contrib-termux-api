@@ -23,7 +23,7 @@ const execTermux = function (cmd, opts, parser) {
   return new Promise(function (resolve, reject) {
     child_process.execFile(cmd, opts, function (err, out, code) {
 
-      console.log('Command:',cmd,opts);
+      console.info('Command:',cmd,opts);
       try{
         var res = parser(out);
         if (typeof res === 'object' && res.error !== undefined) {
@@ -32,7 +32,7 @@ const execTermux = function (cmd, opts, parser) {
           resolve(res);
         }
       }catch(e){
-        console.log('Termux Error:',out);
+        console.error('Termux Error:',out);
         reject(e);
       }
     });

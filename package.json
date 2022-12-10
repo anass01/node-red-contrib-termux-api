@@ -1,10 +1,11 @@
 {
   "name": "node-red-contrib-termux-api",
-  "version": "0.0.5",
+  "version": "0.0.11",
   "description": "Node Red flow to call termux api.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm-pack-all --output build/"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/chameleonbr/node-red-contrib-termux-api#readme",
   "dependencies": {
     "base64url": "^2.0.0",
+    "npm-pack-all": "^1.12.7",
     "ws": "^2.2.2"
   }
 }
